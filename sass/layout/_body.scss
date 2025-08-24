@@ -1,0 +1,9 @@
+// =============================================================================
+// BODY LAYOUT - OhMyFood Project
+// =============================================================================
+
+body {
+  --header-height: 63px;
+  --localisation-height: 50px;
+  --total-header-height: calc(var(--header-height) + var(--localisation-height));
+}

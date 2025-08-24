@@ -1,0 +1,23 @@
+// =============================================================================
+// MAIN SASS FILE - OhMyFood Project
+// =============================================================================
+
+// Base styles
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/typography';
+
+// Utils
+@import 'utils/mixins';
+
+// Components
+@import 'components/buttons';
+@import 'components/composants';
+@import 'components/header';
+
+// Layout
+@import 'layout/body';
+
+// Pages
+@import 'pages/home';

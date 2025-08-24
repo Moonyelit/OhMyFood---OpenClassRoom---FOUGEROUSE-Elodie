@@ -1,0 +1,22 @@
+// =============================================================================
+// HOME PAGE STYLES - OhMyFood Project
+// =============================================================================
+
+body {
+  padding-top: calc(var(--total-header-height) + 1.5rem);
+}
+
+.home-section {
+    background-color: $background-color;
+    @include flex-center;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+    margin-top: calc(-1 * (var(--total-header-height) + 1.5rem)); // Remonte jusqu'en haut
+    padding-top: calc(var(--total-header-height) + 1.5rem + 20px); // Compense le margin-top négatif
+
+    h2 {
+        padding-inline: 2rem;
+    }
+}

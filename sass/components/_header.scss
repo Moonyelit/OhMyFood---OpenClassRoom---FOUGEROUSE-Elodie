@@ -1,0 +1,32 @@
+// =============================================================================
+// HEADER - OhMyFood Project
+// =============================================================================
+
+.header_extension {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header {
+  background-color: $white;
+  box-shadow: $shadow-light;
+  text-align: center;
+  min-height: var(--header-height);
+  @include flex-center;
+  position: relative;
+  z-index: 1000;
+
+  &__localisation {
+    background-color: $background-color-secondary;
+    color: $footer-color;
+    @include flex-center;
+    gap: 17px;
+    box-shadow: $shadow-dark;
+    min-height: var(--localisation-height);
+    position: relative;
+    z-index: 999;
+  }
+}

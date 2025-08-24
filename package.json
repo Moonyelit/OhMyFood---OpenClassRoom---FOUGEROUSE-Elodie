@@ -1,0 +1,13 @@
+{
+  "name": "ohmyfood-project",
+  "version": "1.0.0",
+  "description": "Projet OhMyFood avec animations CSS",
+  "scripts": {
+    "sass": "sass sass/main.scss:assets/css/main.css --watch",
+    "sass:build": "sass sass/main.scss:assets/css/main.css --style=compressed",
+    "sass:dev": "sass sass/main.scss:assets/css/main.css --style=expanded --source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}

@@ -1,0 +1,36 @@
+// =============================================================================
+// TYPOGRAPHY - OhMyFood Project
+// =============================================================================
+body {
+    font-family: $font-family-body;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    font-weight: 300;
+}
+
+/* Titles */
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Logo */
+.logo {
+    font-family: $font-family-title;
+    font-weight: 400;
+    color: $text-color;
+    margin: 0;
+    letter-spacing: 0;
+}
+
+.title-logo {
+    font-size: 30px;
+}
+
+/* Text */
+.text-important {
+    font-weight: 500;
+}
+
+

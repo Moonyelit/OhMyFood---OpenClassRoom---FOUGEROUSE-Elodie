@@ -1,0 +1,17 @@
+# Fichiers CSS générés par Sass (dans le mauvais dossier)
+sass/*.css
+sass/*.css.map
+
+# Dossiers de dépendances
+node_modules/
+
+# Fichiers de build
+dist/
+build/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+
+# Logs
+*.log
