@@ -2,3 +2,37 @@
 // Composants - OhMyFood Project
 // =============================================================================
 
+// Card component réutilisable
+.card {
+  background-color: $white;
+  box-shadow: $shadow-light;
+  transition: $transition-normal;
+  
+  &--functioning {
+    position: relative;
+    padding: 1.5rem 1.5rem;
+    margin-left: 1rem;
+    border-radius: $border-radius-small-medium;
+    background-color: $background-color;
+    box-shadow: $shadow-light;
+    transition: $transition-normal;
+  }
+}
+
+// Badge numéroté
+.badge-number {
+  @include flex-center;
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  background-color: $primary-color;
+  color: $white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+

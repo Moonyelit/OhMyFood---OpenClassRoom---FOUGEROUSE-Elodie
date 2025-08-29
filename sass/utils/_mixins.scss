@@ -19,4 +19,6 @@
   flex-direction: column;
 }
 
- 
+@mixin padding-section {
+  padding: 3rem 1.5rem;
+}
