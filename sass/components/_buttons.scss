@@ -6,7 +6,7 @@
     padding: 15px 20px;
     border-radius: $border-radius-medium;
     border: none;
-    box-shadow: $shadow-medium;
+    cursor: pointer;
 
     &--primary {
         font-weight: 500;
@@ -16,6 +16,7 @@
         background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
         transition: $transition-normal;
         position: relative;
+        box-shadow: $shadow-medium;
 
         &:hover {
             background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
@@ -40,6 +41,25 @@
             opacity: 0;
             transform: scale(0.95);
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+
+    &--new {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: $tertiary-color;
+        color: $green-front;
+        padding: 0.5rem 1rem;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        transition: $transition-normal;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: $shadow-light;
         }
     }
 }

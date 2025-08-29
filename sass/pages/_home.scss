@@ -12,38 +12,40 @@ section:not(.home-section) {
 
 // Home section
 .home-section {
-    background-color: $background-color;
-    @include flex-center;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-    padding: 20px;
-    margin-top: calc(-1 * (var(--total-header-height) + 1.5rem)); // Remonte jusqu'en haut
-    padding-top: calc(var(--total-header-height) + 1.5rem + 20px); // Compense le margin-top négatif
-    padding-bottom: 3.5rem;
+  background-color: $background-color;
+  @include flex-center;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  padding: 20px;
+  margin-top: calc(
+    -1 * (var(--total-header-height) + 1.5rem)
+  ); // Remonte jusqu'en haut
+  padding-top: calc(
+    var(--total-header-height) + 1.5rem + 20px
+  ); // Compense le margin-top négatif
+  padding-bottom: 3.5rem;
 
-    h2 {
-      padding-inline: 2rem;
-    }
-
-    p {
-      margin-bottom: 0.7rem;
-    }
+  h2 {
+    padding-inline: 2rem;
   }
 
+  p {
+    margin-bottom: 0.7rem;
+  }
+}
 
 // Functioning section
 .functioning {
-  
   &__list {
     @include flex-column;
     gap: 1.5rem;
     margin-top: 1.5rem;
   }
-  
+
   &__item {
     @extend .card--functioning;
-    
+
     .badge-number {
       @extend .badge-number;
     }
@@ -54,18 +56,32 @@ section:not(.home-section) {
       margin-left: 1rem;
       gap: 0.5rem;
     }
-    
+
     i {
       color: $grey-color;
       font-size: 1.2rem;
       width: 0.8rem;
       text-align: center;
       margin-right: 1rem;
-
-      .fa-store {
-        color: $primary-color;
-      }
     }
 
+    .fa-store {
+      color: $primary-color;
+    }
   }
-} 
+}
+
+//Restaurants section
+.restaurants {
+  background-color: $background-color;
+
+  &__list {
+    @include flex-column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  &__item {
+    @extend .card--restaurant;
+  }
+}

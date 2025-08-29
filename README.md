@@ -16,3 +16,7 @@ Développer une plateforme innovante qui permet aux clients de :
 - Composer leur repas en amont de leur visite
 - Réduire les temps d'attente au restaurant
 - Bénéficier d'une expérience utilisateur optimisée sur tous les appareils
+
+
+Pour lancer le projet en dev : 
+sass sass/main.scss assets/css/main.css
