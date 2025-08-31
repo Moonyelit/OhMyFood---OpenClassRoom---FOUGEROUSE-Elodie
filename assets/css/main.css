@@ -114,9 +114,6 @@ h3 {
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .btn--heart {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -404,6 +401,11 @@ body {
 .restaurants {
   background-color: #F6F6F6;
 }
+.restaurants .btn--heart {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
 .restaurants__list {
   display: flex;
   flex-direction: column;
@@ -419,7 +421,7 @@ body.restaurant-page {
 }
 .restaurant-header__content img {
   width: 100%;
-  height: auto;
+  max-height: 275px;
   display: block;
   object-fit: cover;
 }
@@ -436,8 +438,10 @@ body.restaurant-page {
 .restaurant-menu__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 2rem;
+}
+.restaurant-menu .btn--heart {
+  margin-left: 2rem;
 }
 .restaurant-menu__title {
   font-family: "Shrikhand", cursive;

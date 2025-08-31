@@ -55,6 +55,12 @@ section:not(.home-section) {
 .restaurants {
   background-color: $background-color;
 
+  .btn--heart {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
   &__list {
     @include flex-column;
     gap: 1.5rem;

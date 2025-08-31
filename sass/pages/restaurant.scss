@@ -14,7 +14,7 @@ body.restaurant-page {
   &__content {
     img {
       width: 100%;
-      height: auto;
+      max-height: 275px;
       display: block;
       object-fit: cover;
     }
@@ -33,8 +33,13 @@ body.restaurant-page {
 
 
   &__header {
-    @include flex-between;
+    display: flex;
+    align-items: center;
     margin-bottom: 2rem;
+  }
+
+  .btn--heart {
+    margin-left: 2rem;
   }
 
   &__title {
