@@ -70,21 +70,6 @@
       margin: 0;
       font-weight: 300;
     }
-
-    .fa-heart {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.2rem;
-      color: $text-color;
-      cursor: pointer;
-      transition: $transition-normal;
-
-      &:hover {
-        color: $primary-color;
-        transform: scale(1.1);
-      }
-    }
   }
 }
 
