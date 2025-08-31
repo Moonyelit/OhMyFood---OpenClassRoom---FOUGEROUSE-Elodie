@@ -6,4 +6,5 @@ body {
   --header-height: 63px;
   --localisation-height: 50px;
   --total-header-height: calc(var(--header-height) + var(--localisation-height));
+  --restaurant-header-height: var(--header-height);
 }
