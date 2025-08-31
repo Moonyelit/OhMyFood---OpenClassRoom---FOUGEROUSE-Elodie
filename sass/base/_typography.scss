@@ -9,7 +9,7 @@ body {
     font-weight: 300;
 }
 
-/* Titles */
+/****************** Titles ******************/
 h2 {
     font-size: 24px;
     font-weight: 700;
@@ -20,20 +20,26 @@ h3 {
     font-weight: 700;
 }
 
-/* Logo */
+/****************** Logo ******************/
 .logo {
     font-family: $font-family-title;
     font-weight: 400;
-    color: $text-color;
     margin: 0;
     letter-spacing: 0;
 }
 
 .title-logo {
     font-size: 30px;
+    color: $text-color;
 }
 
-/* Text */
+.footer-logo {
+    color: $white;
+    font-size: 18px;
+}
+
+
+/****************** Text ******************/
 .text-important {
     font-weight: 500;
 }

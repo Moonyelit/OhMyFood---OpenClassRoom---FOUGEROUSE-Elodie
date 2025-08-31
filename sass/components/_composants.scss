@@ -47,6 +47,15 @@
   overflow: hidden;
   position: relative;
   max-height: 251px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: $transition-normal;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: $shadow-medium;
+  }
 
   img {
     width: 100%;
@@ -65,6 +74,11 @@
     gap: 0.5rem;
     position: relative;
     bottom: 3rem;
+
+    h3 {
+      color: $text-color;
+      margin: 0;
+    }
 
     .text-city {
       margin: 0;
