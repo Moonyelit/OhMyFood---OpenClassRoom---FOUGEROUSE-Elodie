@@ -18,6 +18,24 @@
   @include flex-center;
   position: relative;
   z-index: 1000;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  .logo {
+    flex: 1;
+    text-align: center;
+  }
+
+  &__back-arrow {
+    color: $footer-color;
+    font-size: 20px;
+    text-decoration: none;
+    transition: $transition-normal;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
 
   &__localisation {
     background-color: $background-color-secondary;

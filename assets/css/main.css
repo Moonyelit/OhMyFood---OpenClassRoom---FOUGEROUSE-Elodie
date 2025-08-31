@@ -248,6 +248,21 @@ h3 {
   justify-content: center;
   position: relative;
   z-index: 1000;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.header .logo {
+  flex: 1;
+  text-align: center;
+}
+.header__back-arrow {
+  color: #353535;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.header__back-arrow:hover {
+  color: #9356DC;
 }
 .header__localisation {
   background-color: #EAEAEA;
