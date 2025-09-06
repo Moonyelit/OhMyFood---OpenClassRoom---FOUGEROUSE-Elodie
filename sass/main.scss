@@ -6,10 +6,11 @@
 @import 'base/variables';
 @import 'base/fonts';
 @import 'base/reset';
-@import 'base/typography';
 
 // Utils
 @import 'utils/mixins';
+
+@import 'base/typography';
 
 // Components
 @import 'components/buttons';

@@ -30,6 +30,10 @@ section:not(.home-section) {
 
   h2 {
     padding-inline: 2rem;
+    font-size: clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);    
+    @include tablet {
+      font-size: 40px;
+  }
   }
 
   p {
@@ -43,6 +47,12 @@ section:not(.home-section) {
     @include flex-column;
     gap: 1.5rem;
     margin-top: 1.5rem;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
   }
 
     .badge-number {
@@ -65,6 +75,12 @@ section:not(.home-section) {
     @include flex-column;
     gap: 1.5rem;
     margin-top: 1.5rem;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
   }
 
   &__item {

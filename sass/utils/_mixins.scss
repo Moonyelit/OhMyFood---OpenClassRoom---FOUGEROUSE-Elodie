@@ -21,4 +21,24 @@
 
 @mixin padding-section {
   padding: 3rem 1.5rem;
+
+  @include tablet {
+    padding-block: 3rem;
+    padding-inline: clamp(1.5rem, -8.2414rem + 20.2683vw, 10rem);
+  }
+}
+
+
+
+// Responsive mixins
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
 }
