@@ -2,17 +2,33 @@ footer {
   background-color: $footer-color;
   color: $white;
   padding: 2rem;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 5rem;
+    padding-inline: 5rem;
+  }
 }
 
 .footer {
   &__logo-container {
     margin-bottom: 1rem;
+
+    @include tablet {
+      margin-bottom: 0;
+      order: 2;
+    }
   }
 
   &__links {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    @include tablet {
+      flex-direction: row;
+      order: 1;
+    }
   }
 
   &__link {
@@ -37,7 +53,11 @@ footer {
     }
 
     &:hover {
-      background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+      background: linear-gradient(
+        193.33deg,
+        $primary-color -11.44%,
+        $secondary-color 123.93%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
