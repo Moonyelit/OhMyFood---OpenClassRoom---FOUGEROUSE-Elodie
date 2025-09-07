@@ -414,14 +414,29 @@ footer {
     flex-direction: row;
     order: 1;
     gap: 1rem;
+    align-items: flex-start;
   }
+}
+.footer__links-container-important {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
   .footer__links-container-important {
-    display: flex;
     flex-direction: row;
-    gap: 1rem;
-    margin-right: 4rem;
+    margin-right: 2rem;
+  }
+}
+.footer__links-container-normal {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer__links-container-normal {
+    flex-direction: row;
   }
 }
 .footer__link {
