@@ -28,6 +28,16 @@ footer {
     @include tablet {
       flex-direction: row;
       order: 1;
+      gap: 1rem;
+    }
+
+    &-container-important {
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-right: 4rem;
+      }
     }
   }
 
@@ -62,6 +72,9 @@ footer {
       -webkit-text-fill-color: transparent;
       background-clip: text;
       transform: translateX(5px);
+      @include tablet {
+        transform: translateX(0);
+      }
     }
   }
 }
