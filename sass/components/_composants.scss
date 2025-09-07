@@ -36,10 +36,6 @@
     box-shadow: $shadow-light;
     transition: $transition-normal;
 
-    @include tablet {
-    max-width: 335px;
-    }
-
     .content {
       display: flex;
       align-items: center;
