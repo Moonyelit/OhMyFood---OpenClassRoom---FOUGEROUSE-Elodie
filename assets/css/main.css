@@ -148,6 +148,20 @@ h3 {
   opacity: 1;
 }
 
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .card {
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
   transition: 0.3s ease;
@@ -234,6 +248,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  cursor: pointer;
 }
 .card--menu-item:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -244,6 +259,13 @@ h3 {
   opacity: 1;
 }
 .card--menu-item:hover .menu-item__price {
+  transform: translateX(-4rem);
+}
+.card--menu-item.selected .menu-item__validation {
+  transform: translateX(0);
+  opacity: 1;
+}
+.card--menu-item.selected .menu-item__price {
   transform: translateX(-4rem);
 }
 .card--menu-item .menu-item__validation {
@@ -259,20 +281,29 @@ h3 {
   justify-content: center;
   transform: translateX(100%);
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease-out;
 }
 .card--menu-item .menu-item__validation i {
   color: #FFFFFF;
   font-size: 1.4rem;
+  animation: checkmark 0.3s ease-in-out 0.2s both;
 }
 .card--menu-item .menu-item__title {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 5rem);
 }
 .card--menu-item .menu-item__description {
   font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 5rem);
 }
 .card--menu-item .menu-item__price {
   font-weight: 700;
@@ -280,7 +311,7 @@ h3 {
   bottom: 1rem;
   right: 1.2rem;
   font-size: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease-out;
 }
 
 .badge-number, .functioning .badge-number {
@@ -505,6 +536,16 @@ body {
     gap: 2rem;
   }
 }
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body.restaurant-page {
   padding-top: var(--restaurant-header-height);
 }
@@ -590,9 +631,17 @@ body.restaurant-page {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  counter-reset: menu-item;
 }
 .restaurant-menu__items .card--menu-item:last-child {
   margin-bottom: 0;
+}
+.restaurant-menu__items .card--menu-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease-out forwards;
+  counter-increment: menu-item;
+  animation-delay: calc(0.6s * counter(menu-item));
 }
 .restaurant-menu__button {
   background-color: #F6F6F6;
