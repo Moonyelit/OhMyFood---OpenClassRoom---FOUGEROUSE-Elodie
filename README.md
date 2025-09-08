@@ -161,14 +161,8 @@ npx husky init
 #### Création du hook pre-commit
 
 ```bash
-# Créer le dossier .husky (si pas déjà fait)
-mkdir -p .husky
-
 # Créer le fichier pre-commit
 echo "npm run sass:build" > .husky/pre-commit
-
-# Rendre le fichier exécutable
-chmod +x .husky/pre-commit
 ```
 
 ## 🎨 Charte Graphique
