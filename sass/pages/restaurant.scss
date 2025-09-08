@@ -2,12 +2,16 @@
 // RESTAURANT PAGES - OhMyFood Project
 // =============================================================================
 
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
 // Keyframes pour l'animation progressive des plats
 @keyframes slideInUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -22,7 +26,7 @@ body.restaurant-page {
 // Header restaurant
 .restaurant-header {
   margin-top: 0;
-  
+
   &__content {
     img {
       width: 100%;
@@ -33,7 +37,7 @@ body.restaurant-page {
       @include tablet {
         max-height: 27rem;
         position: relative;
-      bottom: 4rem;
+        bottom: 4rem;
       }
     }
   }
@@ -85,7 +89,7 @@ body.restaurant-page {
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
     position: relative;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -103,11 +107,11 @@ body.restaurant-page {
     flex-direction: column;
     gap: 0.3rem;
     counter-reset: menu-item;
-    
+
     .card--menu-item:last-child {
       margin-bottom: 0;
     }
-    
+
     // Animation progressive des plats - VRAIE solution scalable
     .card--menu-item {
       opacity: 0;
@@ -130,7 +134,7 @@ body.restaurant-page {
       margin-inline: 10rem;
       margin-bottom: 0;
     }
-    
+
     .btn--primary {
       min-width: 186px;
     }

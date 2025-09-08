@@ -3,25 +3,25 @@
 // =============================================================================
 
 // Base styles
-@import 'base/variables';
-@import 'base/fonts';
-@import 'base/reset';
+@use 'base/variables' as *;
+@use 'base/fonts';
+@use 'base/reset';
 
 // Utils
-@import 'utils/mixins';
+@use 'utils/mixins' as *;
 
-@import 'base/typography';
+@use 'base/typography';
 
 // Components
-@import 'components/buttons';
-@import 'components/composants';
-@import 'components/header';
-@import 'components/footer';
-@import 'components/loading';
+@use 'components/buttons';
+@use 'components/composants';
+@use 'components/header';
+@use 'components/footer';
+@use 'components/loading';
 
 // Layout
-@import 'layout/body';
+@use 'layout/body';
 
 // Pages
-@import 'pages/home';
-@import 'pages/restaurant';
+@use 'pages/home';
+@use 'pages/restaurant';

@@ -2,14 +2,18 @@
 // HOME PAGE STYLES - OhMyFood Project
 // =============================================================================
 
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+@use '../components/composants' as *;
+
 body {
   padding-top: calc(var(--total-header-height) + 1.5rem);
 }
 
 .homepage {
-section:not(.home-section) {
-  @include padding-section;
-}
+  section:not(.home-section) {
+    @include padding-section;
+  }
 }
 
 // Home section
@@ -20,20 +24,17 @@ section:not(.home-section) {
   gap: 15px;
   text-align: center;
   padding: 20px;
-  margin-top: calc(
-    -1 * (var(--total-header-height) + 1.5rem)
-  ); // Remonte jusqu'en haut
-  padding-top: calc(
-    var(--total-header-height) + 1.5rem + 20px
-  ); // Compense le margin-top négatif
+  margin-top: calc(-1 * (var(--total-header-height) + 1.5rem)); // Remonte jusqu'en haut
+  padding-top: calc(var(--total-header-height) + 1.5rem + 20px); // Compense le margin-top négatif
   padding-bottom: 3.5rem;
 
   h2 {
     padding-inline: 2rem;
-    font-size: clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);    
+    font-size: clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);
+
     @include tablet {
       font-size: 40px;
-  }
+    }
   }
 
   p {
@@ -55,9 +56,9 @@ section:not(.home-section) {
     }
   }
 
-    .badge-number {
-      @extend .badge-number;
-    }
+  .badge-number {
+    @extend .badge-number;
+  }
 
 }
 
