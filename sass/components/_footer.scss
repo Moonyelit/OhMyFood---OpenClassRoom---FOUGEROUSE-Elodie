@@ -1,7 +1,11 @@
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
+
 footer {
   background-color: $footer-color;
   color: $white;
   padding: 2rem;
+
   @include tablet {
     display: flex;
     flex-direction: row;
@@ -25,6 +29,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 7px;
+
     @include tablet {
       flex-direction: row;
       order: 1;
@@ -44,17 +49,17 @@ footer {
       }
     }
 
-  &-container-normal {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    
-    @include tablet {
-      flex-direction: row;
-    }
-  }
+    &-container-normal {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
 
-}
+      @include tablet {
+        flex-direction: row;
+      }
+    }
+
+  }
 
   &__link {
     display: flex;
@@ -78,15 +83,14 @@ footer {
     }
 
     &:hover {
-      background: linear-gradient(
-        193.33deg,
-        $primary-color -11.44%,
-        $secondary-color 123.93%
-      );
+      background: linear-gradient(193.33deg,
+          $primary-color -11.44%,
+          $secondary-color 123.93%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       transform: translateX(5px);
+
       @include tablet {
         transform: translateX(0);
       }

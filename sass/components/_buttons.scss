@@ -2,6 +2,8 @@
 // BUTTONS - OhMyFood Project
 // =============================================================================
 
+@use '../base/variables' as *;
+
 .btn {
     padding: 15px 20px;
     border-radius: $border-radius-medium;
@@ -22,7 +24,7 @@
         &:hover {
             background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
             box-shadow: $shadow-large;
-            
+
             &::before {
                 opacity: 1;
                 transform: scale(1);
@@ -103,5 +105,3 @@
         }
     }
 }
-
-
