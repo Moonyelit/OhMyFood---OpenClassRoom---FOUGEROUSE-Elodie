@@ -17,6 +17,76 @@
   padding: 0;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes menuItemHover {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+@keyframes checkmarkSlide {
+  0% {
+    transform: translateX(50px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(25px) rotate(180deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes underlineExpand {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes titleSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes buttonSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -174,11 +244,6 @@ h3 {
   background-color: #F6F6F6;
   box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.15);
   transition: 0.3s ease;
-}
-@media (min-width: 768px) {
-  .card--functioning {
-    max-width: 335px;
-  }
 }
 .card--functioning .content {
   display: flex;
@@ -685,16 +750,6 @@ body {
     gap: 2rem;
   }
 }
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 body.restaurant-page {
   padding-top: var(--restaurant-header-height);
 }
@@ -765,6 +820,14 @@ body.restaurant-page {
   margin-bottom: 1.5rem;
   margin-top: 2.5rem;
   position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.9s ease-out 0.3s forwards;
+}
+.restaurant-menu__subtitle::after {
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineExpand 1.2s ease-out calc(0.3s + 0.7s) forwards;
 }
 .restaurant-menu__subtitle::after {
   content: "";
@@ -786,11 +849,31 @@ body.restaurant-page {
   margin-bottom: 0;
 }
 .restaurant-menu__items .card--menu-item {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideInUp 0.6s ease-out forwards;
   counter-increment: menu-item;
-  animation-delay: calc(0.6s * counter(menu-item));
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  animation: fadeInUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.restaurant-menu__items .card--menu-item:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+.restaurant-menu__items .card--menu-item:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.restaurant-menu__items .card--menu-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.restaurant-menu__items .card--menu-item:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.restaurant-menu__items .card--menu-item:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.restaurant-menu__items .card--menu-item:nth-child(n+5) {
+  animation-delay: calc(1.5s + 0.2s * (counter(menu-item) - 5));
 }
 .restaurant-menu__button {
   background-color: #F6F6F6;
@@ -808,6 +891,14 @@ body.restaurant-page {
 }
 .restaurant-menu__button .btn--primary {
   min-width: 186px;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: buttonSlideIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards;
+}
+.restaurant-menu__button .btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /*# sourceMappingURL=main.css.map */
