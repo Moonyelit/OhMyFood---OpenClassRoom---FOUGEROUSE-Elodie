@@ -2,15 +2,25 @@
 // RESTAURANT PAGES - OhMyFood Project
 // =============================================================================
 
-// Annuler le padding-top du body pour les pages restaurants
-body.restaurant-page {
-  padding-top: var(--restaurant-header-height);
-}
+@use '../base/variables' as *;
+@use '../utils/mixins' as *;
 
+// Keyframes pour l'animation progressive des plats
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 // Header restaurant
 .restaurant-header {
   margin-top: 0;
-  
+
   &__content {
     img {
       width: 100%;
@@ -21,7 +31,7 @@ body.restaurant-page {
       @include tablet {
         max-height: 27rem;
         position: relative;
-      bottom: 4rem;
+        bottom: 4rem;
       }
     }
   }
@@ -73,17 +83,6 @@ body.restaurant-page {
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
     position: relative;
-    @include section-title-animation(0.3s);
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 40px;
-      height: 3px;
-      background-color: $tertiary-color;
-    }
   }
 
   &__items {
@@ -92,12 +91,11 @@ body.restaurant-page {
     flex-direction: column;
     gap: 0.3rem;
     counter-reset: menu-item;
-    
+
     .card--menu-item:last-child {
       margin-bottom: 0;
     }
-    
-    // Animation progressive des plats avec délais échelonnés
+
     .card--menu-item {
       counter-increment: menu-item;
       
@@ -141,10 +139,11 @@ body.restaurant-page {
       margin-inline: 10rem;
       margin-bottom: 0;
     }
-    
+
     .btn--primary {
       min-width: 186px;
       @include button-animation(2.2s);
     }
   }
 }
+  

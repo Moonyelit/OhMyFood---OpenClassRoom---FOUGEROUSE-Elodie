@@ -2,6 +2,8 @@
 // LOADING ANIMATION - OhMyFood Project
 // =============================================================================
 
+@use '../base/variables' as *;
+
 .loading {
   position: fixed;
   top: 0;
@@ -84,43 +86,60 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
 }
 
 @keyframes dots {
-  0%, 20% {
+
+  0%,
+  20% {
     content: '';
   }
+
   40% {
     content: '.';
   }
+
   60% {
     content: '..';
   }
-  80%, 100% {
+
+  80%,
+  100% {
     content: '...';
   }
 }
@@ -130,6 +149,7 @@
     opacity: 1;
     visibility: visible;
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
@@ -146,6 +166,7 @@
     transform: translateY(30px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
