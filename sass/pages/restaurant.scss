@@ -121,8 +121,24 @@
       }
       
       // Animation pour les plats suivants avec délai progressif
-      &:nth-child(n+5) {
-        animation-delay: calc(1.5s + (0.2s * (counter(menu-item) - 5)));
+      &:nth-child(5) {
+        animation-delay: 1.5s;
+      }
+      
+      &:nth-child(6) {
+        animation-delay: 1.7s;
+      }
+      
+      &:nth-child(7) {
+        animation-delay: 1.9s;
+      }
+      
+      &:nth-child(8) {
+        animation-delay: 2.1s;
+      }
+      
+      &:nth-child(n+9) {
+        animation-delay: 2.3s;
       }
     }
   }

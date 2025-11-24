@@ -855,8 +855,20 @@ body {
 .restaurant-menu__items .card--menu-item:nth-child(4) {
   animation-delay: 1.2s;
 }
-.restaurant-menu__items .card--menu-item:nth-child(n+5) {
-  animation-delay: calc(1.5s + 0.2s * (counter(menu-item) - 5));
+.restaurant-menu__items .card--menu-item:nth-child(5) {
+  animation-delay: 1.5s;
+}
+.restaurant-menu__items .card--menu-item:nth-child(6) {
+  animation-delay: 1.7s;
+}
+.restaurant-menu__items .card--menu-item:nth-child(7) {
+  animation-delay: 1.9s;
+}
+.restaurant-menu__items .card--menu-item:nth-child(8) {
+  animation-delay: 2.1s;
+}
+.restaurant-menu__items .card--menu-item:nth-child(n+9) {
+  animation-delay: 2.3s;
 }
 .restaurant-menu__button {
   background-color: #F6F6F6;
