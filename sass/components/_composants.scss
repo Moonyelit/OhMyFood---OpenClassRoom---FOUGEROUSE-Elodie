@@ -70,14 +70,18 @@
     overflow: hidden;
     position: relative;
     max-height: 251px;
-    text-decoration: none;
-    color: inherit;
     display: block;
     transition: $transition-normal;
 
     &:hover {
       transform: scale(1.02);
       box-shadow: $shadow-medium;
+    }
+
+    > a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
     img {
@@ -97,6 +101,8 @@
       gap: 0.5rem;
       position: relative;
       bottom: 3rem;
+      color: $text-color;
+      text-decoration: none;
 
       h3 {
         color: $text-color;
